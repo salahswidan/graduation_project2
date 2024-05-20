@@ -16,11 +16,13 @@ class _BmiScreenState extends State<BmiScreen> {
   double height = 120;
   int weight = 80;
   int age = 20;
+  String resulttext = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        // backgroundColor: Colors.blue,
+        backgroundColor: Colors.black,
         title: Text(
           'BMI Calculator',
         ),
@@ -59,7 +61,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: isMale ? Colors.blue : Colors.grey[400],
+                          color: isMale ? Color(0xffD0FD3E) : Colors.grey[400],
                         ),
                       ),
                     ),
@@ -94,7 +96,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: !isMale ? Colors.blue : Colors.grey[400],
+                          color: !isMale ? Color(0xffD0FD3E) : Colors.grey[400],
                         ),
                       ),
                     ),
@@ -266,12 +268,26 @@ class _BmiScreenState extends State<BmiScreen> {
 
           Container(
             width: double.infinity,
-            color: Colors.blue,
+            color: Color(0xffD0FD3E),
             child: MaterialButton(
               onPressed: () {
                 try {
                   double result = weight / pow(height / 100, 2);
                   print('BMI Result: ${result.round()}');
+
+                  if (result < 18.5) {
+                    resulttext = 'underweight';
+                  } else if (18.5 < result && result < 24.9) {
+                    resulttext = 'healthy (normal)';
+                  } else if (25 < result && result < 29.9) {
+                    resulttext = 'overweight';
+                  } else if (30 < result && result < 34.9) {
+                    resulttext = 'Class | obesity';
+                  } else if (35 < result && result < 39.9) {
+                    resulttext = 'Class || obesity';
+                  } else {
+                    resulttext = 'undefined';
+                  }
 
                   Navigator.push(
                     context,
@@ -280,6 +296,7 @@ class _BmiScreenState extends State<BmiScreen> {
                         age: age,
                         isMale: isMale,
                         result: result.round(),
+                        resultText: resulttext,
                       ),
                     ),
                   );
@@ -291,7 +308,7 @@ class _BmiScreenState extends State<BmiScreen> {
               height: 50,
               child: Text(
                 'CALCULATE',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
             ),
           ),

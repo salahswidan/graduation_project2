@@ -1,10 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:ui_screens/exercises/beginner/increase_weight/Day1_Chest.dart';
 
+import '../../../TargetPage/custom_target_page.dart';
 import '../../../constant/constant.dart';
 
 class BeginnerIncreaseWightDay4 extends StatelessWidget {
   const BeginnerIncreaseWightDay4({super.key});
+  Widget _exerciseContainer(BuildContext context, String title, String subTitle,
+      String imagePath, String Gifimage) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CustomTargetPage(
+              exerciseName: subTitle,
+              //      exerciseImage: imagePath,
+              Gifimage: Gifimage,
+            ),
+          ),
+        );
+      },
+      child: Container(
+        height: 120,
+        width: 382,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: const Color.fromARGB(255, 83, 76, 76),
+        ),
+        child: Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0, left: 20),
+                  child: Text(
+                    title,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 7.0, left: 10),
+                  child: Text(
+                    subTitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0, left: 30),
+                  child: Text(
+                    '3 Sets 15-12-10 Reps',
+                    style:
+                        const TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(width: 3),
+            Image.asset(
+              imagePath,
+              width: 160,
+              height: 115,
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,48 +124,55 @@ class BeginnerIncreaseWightDay4 extends StatelessWidget {
               ),
               _buildExerciseHeader(title: 'Exercise Biceps'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Biceps Exercise',
-                subtitle: '(Wide Straight Bar)',
-                imagePath: 'assets/assets/images/Wide_straight_bar.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Biceps Exercise',
+                  '(Wide Straight Bar)',
+                  'assets/assets/images/Wide_straight_bar.jpg',
+                  'assets/assets/images/Wide_straight_bar.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Biceps Exercise',
-                subtitle: '(Narrow fulcrum bar)',
-                imagePath: 'assets/assets/images/Narrow_fulcrum_bar.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Biceps Exercise',
+                  '(Narrow fulcrum bar)',
+                  'assets/assets/images/Narrow_fulcrum_bar.jpg',
+                  'assets/assets/images/Anchor_device.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Biceps Exercise',
-                subtitle: '(Exchange dimple)',
-                imagePath: 'assets/assets/images/Exchange_dimple.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Biceps Exercise',
+                  '(Exchange dimple)',
+                  'assets/assets/images/Exchange_dimple.jpg',
+                  'assets/assets/images/Exchange_dumbbell.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Biceps Exercise',
-                subtitle: '(Double hammer)',
-                imagePath: 'assets/assets/images/Double_hammer.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Biceps Exercise',
+                  '(Double hammer)',
+                  'assets/assets/images/Double_hammer.jpg',
+                  'assets/assets/images/Double_hammer.gif'),
               _buildExerciseHeader(title: 'Exercise Triceps'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Triceps Exercise',
-                subtitle: '(Bar zigzag is sleeping)',
-                imagePath: 'assets/assets/images/Bar_zigzag_is_sleeping.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Triceps Exercise',
+                  '(Bar zigzag is sleeping)',
+                  'assets/assets/images/Bar_zigzag_is_sleeping.jpg',
+                  'assets/assets/images/Bar_zigzag.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Triceps Exercise',
-                subtitle: '(Cable pulled ruler)',
-                imagePath: 'assets/assets/images/Cable_pulled_ruler.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Triceps Exercise',
+                  '(Cable pulled ruler)',
+                  'assets/assets/images/Cable_pulled_ruler.jpg',
+                  'assets/assets/images/FLAT_BAR.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Triceps Exercise',
-                subtitle: '(Stab)',
-                imagePath: 'assets/assets/images/Stab.jpg',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Triceps Exercise',
+                  '(Stab)',
+                  'assets/assets/images/Stab.jpg',
+                  'assets/assets/images/Stab.gif'),
               Rate_Us(),
               bottom_tab_bar(),
             ],

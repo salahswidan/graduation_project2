@@ -1,55 +1,72 @@
 import 'package:flutter/material.dart';
+import 'package:ui_screens/core/home.dart';
+import '../../../TargetPage/custom_target_page.dart';
 import '../../../constant/constant.dart';
 
 class BeginnerIncreaseWeightDay1 extends StatelessWidget {
   const BeginnerIncreaseWeightDay1({Key? key}) : super(key: key);
 
-  Widget _exerciseContainer(String title, String subTitle, String imagePath) {
-    return Container(
-      height: 120,
-      width: 382,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: const Color.fromARGB(255, 83, 76, 76),
-      ),
-      child: Row(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 20),
-                child: Text(
-                  title,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 7.0, left: 10),
-                child: Text(
-                  subTitle,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20.0, left: 30),
-                child: Text(
-                  '3 Sets 15-12-10 Reps',
-                  style:
-                      const TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-                ),
-              ),
-            ],
+  Widget _exerciseContainer(BuildContext context, String title, String subTitle,
+      String imagePath, String Gifimage) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CustomTargetPage(
+              exerciseName: subTitle,
+              //      exerciseImage: imagePath,
+              Gifimage: Gifimage,
+            ),
           ),
-          const SizedBox(width: 3),
-          Image.asset(
-            imagePath,
-            width: 160,
-            height: 115,
-            fit: BoxFit.cover,
-          ),
-        ],
+        );
+      },
+      child: Container(
+        height: 120,
+        width: 382,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: const Color.fromARGB(255, 83, 76, 76),
+        ),
+        child: Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0, left: 20),
+                  child: Text(
+                    title,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 7.0, left: 10),
+                  child: Text(
+                    subTitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0, left: 30),
+                  child: Text(
+                    '3 Sets 15-12-10 Reps',
+                    style:
+                        const TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(width: 3),
+            Image.asset(
+              imagePath,
+              width: 160,
+              height: 115,
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -105,100 +122,46 @@ class BeginnerIncreaseWeightDay1 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 50),
-              _exerciseContainer('Chest Exercise', '      (Flat Bar)',
-                  'assets/assets/images/flat_bar.jpg'),
+              SizedBox(
+                height: 30,
+              ),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '(Flat Bar)',
+                  'assets/assets/images/flat_bar.jpg',
+                  'assets/assets/images/FLAT_BAR.gif'),
               const SizedBox(height: 30),
-              _exerciseContainer('Chest Exercise', '      (High Bar)',
-                  'assets/assets/images/High_bar.jpeg'),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '(High Bar)',
+                  'assets/assets/images/High_bar.jpeg',
+                  'assets/assets/images/High_Bar.gif'),
               const SizedBox(height: 30),
-              _exerciseContainer('Chest Exercise', '(Flat Dumbbells)',
-                  'assets/assets/images/Flat_dumbbells.jpg'),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '(Flat Dumbbells)',
+                  'assets/assets/images/Flat_dumbbells.jpg',
+                  'assets/assets/images/Flat_Dumbbell.gif'),
               const SizedBox(height: 30),
-              _exerciseContainer('Chest Exercise', '(High Dumbbells)',
-                  'assets/assets/images/High_dumbbees.jpg'),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '(High Dumbbells)',
+                  'assets/assets/images/High_dumbbees.jpg',
+                  'assets/assets/images/High_Dumbbell.gif'),
               const SizedBox(height: 30),
-              _exerciseContainer('Chest Exercise', ' (Svend Press)',
-                  'assets/assets/images/Svend_press.jpg'),
-              const RateUs(),
-              const BottomTabBar(),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '(Svend Press)',
+                  'assets/assets/images/Svend_press.jpg',
+                  'assets/assets/images/Svend_Press.gif'),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class BottomTabBar extends StatelessWidget {
-  const BottomTabBar({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
-        Icon(
-          Icons.home,
-          color: Color(0xffD0FD3E),
-        ),
-        Icon(
-          Icons.add_alert_sharp,
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.bar_chart,
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.panorama_fish_eye_outlined,
-          color: Colors.white,
-        ),
-      ],
-    );
-  }
-}
-
-class RateUs extends StatelessWidget {
-  const RateUs({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          Text(
-            '   Rate Us',
-            style: TextStyle(color: Color(0xffD0FD3E), fontSize: 30),
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_border_outlined,
-            color: Colors.white,
-            size: 40,
-          ),
-        ],
       ),
     );
   }

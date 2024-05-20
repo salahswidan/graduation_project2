@@ -1,18 +1,23 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_screens/core/home.dart';
 
 class CustomTargetPage extends StatelessWidget {
-  const CustomTargetPage({super.key});
+  final String exerciseName;
+  // final String exerciseImage;
+  final String Gifimage;
+
+  const CustomTargetPage({required this.exerciseName, required this.Gifimage});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text(
-          'Exercise Name',
-          style: TextStyle(color: Colors.black, fontSize: 28),
+        title: Center(
+          child: Text(
+            exerciseName,
+            style: TextStyle(color: Colors.black, fontSize: 28),
+          ),
         ),
         elevation: 0,
         backgroundColor: Color(0xffD0FD3E),
@@ -30,10 +35,15 @@ class CustomTargetPage extends StatelessWidget {
           ),
         ],
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_circle_left_outlined,
-          color: Colors.black,
-          size: 50,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_circle_left_outlined,
+            color: Colors.black,
+            size: 50,
+          ),
         ),
       ),
       body: Center(
@@ -42,10 +52,14 @@ class CustomTargetPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Image.asset(
-              'assets/assets/images/Flat_bar_Full.png', // iamfe index
-              width: 334,
-              height: 177,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(40),
+              child: Image.asset(
+                Gifimage,
+                width: 334,
+                height: 250,
+                fit: BoxFit.cover,
+              ),
             ),
             SizedBox(
               height: 30,

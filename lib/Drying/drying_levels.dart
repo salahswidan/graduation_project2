@@ -443,8 +443,8 @@ class DryingLevels extends StatelessWidget {
                       color: Colors.white,
                     ),
 
-               Rate_Us(),
-            bottom_tab_bar(),
+                    Rate_Us(),
+                    bottom_tab_bar(),
                   ],
                 ),
               ),
@@ -895,10 +895,8 @@ class DryingLevels extends StatelessWidget {
                         thickness: 1,
                         color: Colors.white,
                       ),
-                        Rate_Us(),
+                      Rate_Us(),
                       bottom_tab_bar(),
-
-              
                     ],
                   ),
                 ),
@@ -1318,8 +1316,8 @@ class DryingLevels extends StatelessWidget {
                       color: Colors.white,
                     ),
 
-               Rate_Us(),
-            bottom_tab_bar(),
+                    Rate_Us(),
+                    bottom_tab_bar(),
                   ],
                 ),
               ),

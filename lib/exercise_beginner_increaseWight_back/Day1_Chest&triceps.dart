@@ -1,57 +1,72 @@
 import 'package:flutter/material.dart';
 
+import '../TargetPage/custom_target_page.dart';
+import '../constant/constant.dart';
+
 class BeginnerIncreaseWeightBackDay1 extends StatelessWidget {
   const BeginnerIncreaseWeightBackDay1({Key? key}) : super(key: key);
 
-  Widget _buildExerciseContainer(
-      String title, String subTitle, String imagePath) {
-    return Container(
-      height: 120,
-      width: 382,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: const Color.fromARGB(255, 83, 76, 76),
-      ),
-      child: Row(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 20),
-                child: Text(
-                  title,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 7.0, left: 10),
-                child: Text(
-                  subTitle,
-                  style: const TextStyle(color: Colors.white, fontSize: 20),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20.0, left: 30),
-                child: Text(
-                  '3 Sets 15-12-10 Reps',
-                  style:
-                      const TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-                ),
-              ),
-            ],
+  Widget _exerciseContainer(BuildContext context, String title, String subTitle,
+      String imagePath, String Gifimage) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CustomTargetPage(
+              exerciseName: subTitle,
+              //      exerciseImage: imagePath,
+              Gifimage: Gifimage,
+            ),
           ),
-          SizedBox(
-            width: 3,
-          ),
-          Image.asset(
-            imagePath,
-            width: 160,
-            height: 115,
-            fit: BoxFit.cover,
-          )
-        ],
+        );
+      },
+      child: Container(
+        height: 120,
+        width: 382,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: const Color.fromARGB(255, 83, 76, 76),
+        ),
+        child: Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0, left: 20),
+                  child: Text(
+                    title,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 7.0, left: 10),
+                  child: Text(
+                    subTitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0, left: 30),
+                  child: Text(
+                    '3 Sets 15-12-10 Reps',
+                    style:
+                        const TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(width: 3),
+            Image.asset(
+              imagePath,
+              width: 160,
+              height: 115,
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -110,25 +125,39 @@ class BeginnerIncreaseWeightBackDay1 extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              _buildExerciseContainer('Chest Exercise', '      (High Bar)',
-                  'assets/assets/images/High_bar.jpeg'),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '      (High Bar)',
+                  'assets/assets/images/High_bar.jpeg',
+                  'assets/assets/images/High_Bar.gif'),
               const SizedBox(
                 height: 30,
               ),
-              _buildExerciseContainer(
+              _exerciseContainer(
+                  context,
                   'Chest Exercise',
                   '      (Flat Dumbbells)',
-                  'assets/assets/images/flat_dumbbells2.jpg'),
+                  'assets/assets/images/flat_dumbbells2.jpg',
+                  'assets/assets/images/Flat_Dumbbell.gif'),
               const SizedBox(
                 height: 30,
               ),
-              _buildExerciseContainer('Chest Exercise', '(High Dumbbells)',
-                  'assets/assets/images/High_dumbbees.jpg'),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  '(High Dumbbells)',
+                  'assets/assets/images/High_dumbbees.jpg',
+                  'assets/assets/images/High_Dumbbell.gif'),
               const SizedBox(
                 height: 30,
               ),
-              _buildExerciseContainer('Chest Exercise', ' (Butterfly)',
-                  'assets/assets/images/butterfly2.jpg'),
+              _exerciseContainer(
+                  context,
+                  'Chest Exercise',
+                  ' (Butterfly)',
+                  'assets/assets/images/butterfly2.jpg',
+                  'assets/assets/images/Butterfly.gif'),
               SizedBox(
                 height: 30,
               ),
@@ -152,106 +181,39 @@ class BeginnerIncreaseWeightBackDay1 extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              _buildExerciseContainer(
+              _exerciseContainer(
+                  context,
                   'Triceps Exercise',
                   '      (Bar zigzag dik)',
-                  'assets/assets/images/Bar_zigzag_dik.jpg'),
+                  'assets/assets/images/Bar_zigzag_dik.jpg',
+                  'assets/assets/images/Bar_zigzag.gif'),
               const SizedBox(
                 height: 30,
               ),
-              _buildExerciseContainer('Triceps Exercise', '(Rope on the cable)',
-                  'assets/assets/images/Rope_on_the_cable.jpg'),
+              _exerciseContainer(
+                context,
+                'Triceps Exercise',
+                '(Rope on the cable)',
+                'assets/assets/images/Rope_on_the_cable.jpg',
+                'assets/assets/images/Rope_on_the _cable.gif',
+              ),
               const SizedBox(
                 height: 30,
               ),
-              _buildExerciseContainer('Triceps Exercise', ' (Exchange  dimple)',
-                  'assets/assets/images/Exchange_dimple2.jpg'),
+              _exerciseContainer(
+                  context,
+                  'Triceps Exercise',
+                  ' (Exchange  dimple)',
+                  'assets/assets/images/Exchange_dimple2.jpg',
+                  'assets/assets/images/FLAT_BAR.gif'),
               SizedBox(
                 height: 30,
               ),
-              const RateUs(),
-              const BottomTabBar(),
+              Rate_Us(),
+              bottom_tab_bar(),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class BottomTabBar extends StatelessWidget {
-  const BottomTabBar({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Icon(
-          Icons.home,
-          color: Color(0xffD0FD3E),
-        ),
-        Icon(
-          Icons.add_alert_sharp,
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.bar_chart,
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.panorama_fish_eye_outlined,
-          color: Colors.white,
-        ),
-      ],
-    );
-  }
-}
-
-class RateUs extends StatelessWidget {
-  const RateUs({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(40.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            '   Rate Us',
-            style: TextStyle(color: Color(0xffD0FD3E), fontSize: 30),
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_outlined,
-            color: Colors.orange,
-            size: 40,
-          ),
-          Icon(
-            Icons.star_border_outlined,
-            color: Colors.white,
-            size: 40,
-          )
-        ],
       ),
     );
   }

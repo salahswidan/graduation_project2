@@ -1,338 +1,76 @@
-// import 'package:flutter/material.dart';
-// import 'package:ui_screens/exercises/beginner/increase_weight/Day1_Chest.dart';
-
-// import '../../../constant/constant.dart';
-
-// class BeginnerIncreaseWightDay5 extends StatelessWidget {
-//   const BeginnerIncreaseWightDay5({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return SafeArea(
-//         child: Scaffold(
-//       backgroundColor: Colors.black,
-//       body: SingleChildScrollView(
-//         child: Column(
-//           children: [
-//             Stack(
-//               children: [
-//                 Image.asset('assets/assets/images/Legs.png'),
-//                 Padding(
-//                   padding: const EdgeInsets.all(12.0),
-//                   child: Icon(
-//                     Icons.arrow_left_sharp,
-//                     color: Colors.white,
-//                     size: 40,
-//                   ),
-//                 ),
-//                 Padding(
-//                   padding: const EdgeInsets.only(left: 30.0, top: 160),
-//                   child: Text(
-//                     'Day 5 | Legs',
-//                     style: TextStyle(color: Colors.white, fontSize: 24),
-//                   ),
-//                 ),
-//                 Padding(
-//                   padding: const EdgeInsets.only(left: 30.0, top: 200),
-//                   child: Row(
-//                     children: [
-//                       Text(
-//                         '      6 Week ',
-//                         style: TextStyle(color: Colors.white, fontSize: 18),
-//                       ),
-//                       Icon(
-//                         Icons.local_fire_department_outlined,
-//                         color: Color(0xffD0FD3E),
-//                       ),
-//                       Icon(
-//                         Icons.local_fire_department_outlined,
-//                         color: Color(0xffD0FD3E),
-//                       ),
-//                       Icon(
-//                         Icons.local_fire_department_outlined,
-//                         color: Color(0xffD0FD3E),
-//                       ),
-//                     ],
-//                   ),
-//                 )
-//               ],
-//             ),
-//             SizedBox(
-//               height: 50,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       'Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       ' (Warm up the leg muscles)',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               height: 30,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       'Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       '(Squats on the back bar )',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               height: 30,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       '  Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       '(Walking with dumbbells)',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               height: 30,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       '  Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       '(Front Leg swing)',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               height: 30,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       '  Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       '(Back man swing)',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               height: 30,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       '     Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       '(Calf press with dumbbelld )',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             SizedBox(
-//               height: 30,
-//             ),
-//             Container(
-//               height: 120,
-//               width: 382,
-//               decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(30),
-//                   color: Color.fromARGB(255, 83, 76, 76)),
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.start,
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 10.0, left: 40),
-//                     child: Text(
-//                       '   Legs Exercise',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 7.0, left: 40),
-//                     child: Text(
-//                       '( Press his calf with the device  )',
-//                       style: TextStyle(color: Colors.white, fontSize: 20),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(top: 20.0, left: 130),
-//                     child: Text(
-//                       '3 Sets 15-12-10 Reps',
-//                       style: TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//        Rate_Us(),
-//        bottom_tab_bar(),
-//           ],
-//         ),
-//       ),
-//     ));
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
 import 'package:ui_screens/exercises/beginner/increase_weight/Day1_Chest.dart';
 
+import '../../../TargetPage/custom_target_page.dart';
 import '../../../constant/constant.dart';
 
 class BeginnerIncreaseWightDay5 extends StatelessWidget {
   const BeginnerIncreaseWightDay5({Key? key});
+
+  Widget _exerciseContainer(BuildContext context, String title, String subTitle,
+      String imagePath, String Gifimage) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CustomTargetPage(
+              exerciseName: subTitle,
+              //      exerciseImage: imagePath,
+              Gifimage: Gifimage,
+            ),
+          ),
+        );
+      },
+      child: Container(
+        height: 120,
+        width: 382,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: const Color.fromARGB(255, 83, 76, 76),
+        ),
+        child: Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0, left: 20),
+                  child: Text(
+                    title,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 7.0, left: 10),
+                  child: Text(
+                    subTitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0, left: 30),
+                  child: Text(
+                    '3 Sets 15-12-10 Reps',
+                    style:
+                        const TextStyle(color: Color(0xffD0FD3E), fontSize: 20),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(width: 3),
+            Image.asset(
+              imagePath,
+              width: 160,
+              height: 115,
+              fit: BoxFit.cover,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -347,40 +85,47 @@ class BeginnerIncreaseWightDay5 extends StatelessWidget {
                 title: 'Day 5 | Legs',
               ),
               SizedBox(height: 50),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Warm up the leg muscles)',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Legs Exercise',
+                  '(Front Bar)',
+                  'assets/assets/images/front_bar.png',
+                  'assets/assets/images/Front_bar2.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Squats on the back bar)',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Legs Exercise',
+                  '(Rear flap device)',
+                  'assets/assets/images/Rear_flap_device.png',
+                  'assets/assets/images/Rear_flap_device.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Walking with dumbbells)',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Legs Exercise',
+                  '(Walking dumbbell)',
+                  'assets/assets/images/walking_dumbbell.png',
+                  'assets/assets/images/Walking_dumbbell.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Front Leg swing)',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Legs Exercise',
+                  '(Rear dumbbell)',
+                  'assets/assets/images/rear_dumbbell.png',
+                  'assets/assets/images/Rear_dumbbell.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Back man swing)',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Legs Exercise',
+                  '(Front flap)',
+                  'assets/assets/images/front_flap_2.png',
+                  'assets/assets/images/Front_flap2.gif'),
               SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Calf press with dumbbelld)',
-              ),
-              SizedBox(height: 30),
-              _buildExerciseCard(
-                title: 'Legs Exercise',
-                subtitle: '(Press his calf with the device)',
-              ),
+              _exerciseContainer(
+                  context,
+                  'Legs Exercise',
+                  '(Calf)',
+                  'assets/assets/images/calf.png',
+                  'assets/assets/images/FLAT_BAR.gif'),
               Rate_Us(),
               bottom_tab_bar(),
             ],
