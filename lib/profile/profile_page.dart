@@ -54,7 +54,7 @@ class ProfilePage extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xffD0FD3E),
+                  backgroundColor: Color(0xffD0FD3E),
                   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13),

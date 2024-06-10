@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../constant/constant.dart';
 import '../core/home.dart';
 
-class ChestGuide extends StatelessWidget {
-  const ChestGuide({Key? key}) : super(key: key);
+class ArmorGuide extends StatelessWidget {
+  const ArmorGuide({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ChestGuide extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Chest',
+            'ARMOR',
             style: TextStyle(color: Colors.black, fontSize: 28),
           ),
         ),
@@ -52,72 +52,63 @@ class ChestGuide extends StatelessWidget {
             children: [
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/High_Dumbbell.gif',
-                  title: 'High assembly dumbbells',
+                  image: 'assets/assets/images/Straight_bar_is_sleeping.gif',
+                  title: 'Straight bar is sleeping',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Butterfly2.gif',
-                  title: 'Butterfly collection',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/pressure.gif',
-                  title: 'Pressure',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/Assemble_rope.gif',
-                  title: 'Assemble Rope',
+                  image: 'assets/assets/images/Dumbbell_stabbed.gif',
+                  title: 'Dumbbell Stabbed',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_Dumbbells2.gif',
-                  title: 'Flat Dumbbells',
+                  image: 'assets/assets/images/Ruler_on_the_cable_5.gif',
+                  title: 'Ruler on the cable',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Payment_high_device.gif',
-                  title: 'Payment High Device',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/Payment_high_device3.gif',
-                  title: 'Payment High Device',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/Pay_on_cable.gif',
-                  title: 'Pay on cable',
+                  image: 'assets/assets/images/Dumbbell_stabbed_2.gif',
+                  title: 'Dumbbell Stabbed',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Payment_high_device4.gif',
-                  title: 'Payment High Device',
+                  image: 'assets/assets/images/Rope_handle.gif',
+                  title: 'Rope Handle',
                 ),
+                //! note
                 ItemData(
-                  image: 'assets/assets/images/Payment_flat_device.gif',
-                  title: 'Payment Flat Device',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/Flat_assembly_dumbbells.gif',
-                  title: 'Flat Assembly Dumbbells',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/High_bar_smss.gif',
-                  title: 'High Bar SMS',
+                  image: 'assets/assets/images/test_zag.gif',
+                  title: 'Zigzag Bar',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_barr.gif',
-                  title: 'Flat Bar',
+                  image: 'assets/assets/images/Zigzag_bar_2.gif',
+                  title: 'Exchange Dumbbells',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Parallel.gif',
-                  title: 'Parallel',
+                  image: 'assets/assets/images/Anchor_device_2.gif',
+                  title: 'Anchor Device',
+                ),
+              ]),
+              _buildItemList(context, [
+                ItemData(
+                  image: 'assets/assets/images/Anchor_dumbbell.gif',
+                  title: 'Anchor Dumbbell',
+                ),
+                ItemData(
+                  image: 'assets/assets/images/Exchange_dumbbells_2.gif',
+                  title: 'Exchange Dumbbells',
+                ),
+              ]),
+              _buildItemList(context, [
+                ItemData(
+                  image: 'assets/assets/images/Dumbbell_hammer_3.gif',
+                  title: 'Dumbbell Hammer',
+                ),
+                ItemData(
+                  image: 'assets/assets/images/Pull_on_the_cable_3.gif',
+                  title: 'Pull on The cable',
                 ),
               ]),
               SizedBox(height: 10),

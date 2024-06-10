@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../constant/constant.dart';
 import '../core/home.dart';
 
-class ChestGuide extends StatelessWidget {
-  const ChestGuide({Key? key}) : super(key: key);
+class ShouldersGuide extends StatelessWidget {
+  const ShouldersGuide({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ChestGuide extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Chest',
+            'SHOULDERS',
             style: TextStyle(color: Colors.black, fontSize: 28),
           ),
         ),
@@ -52,72 +52,62 @@ class ChestGuide extends StatelessWidget {
             children: [
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/High_Dumbbell.gif',
-                  title: 'High assembly dumbbells',
+                  image: 'assets/assets/images/Front_flap_with_bar.gif',
+                  title: 'Front Flap With Bar',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Butterfly2.gif',
-                  title: 'Butterfly collection',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/pressure.gif',
-                  title: 'Pressure',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/Assemble_rope.gif',
-                  title: 'Assemble Rope',
+                  image: 'assets/assets/images/Rear_flap_with_cable.gif',
+                  title: 'Rear Flap With Cable',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_Dumbbells2.gif',
+                  image: 'assets/assets/images/Side_flap_with_cable.gif',
+                  title: 'Side flap With Cable',
+                ),
+                ItemData(
+                  image: 'assets/assets/images/Front_flap_with_cable.gif',
+                  title: 'Front flap with Cable',
+                ),
+              ]),
+              _buildItemList(context, [
+                ItemData(
+                  image: 'assets/assets/images/Flat_dumbbells_2.gif',
                   title: 'Flat Dumbbells',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Payment_high_device.gif',
-                  title: 'Payment High Device',
+                  image: 'assets/assets/images/Rear_flap_with_device.gif',
+                  title: 'Rear flap With Device',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Payment_high_device3.gif',
-                  title: 'Payment High Device',
+                  image: 'assets/assets/images/Side_dumbbell_2.gif',
+                  title: 'Side Dumbbell',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Pay_on_cable.gif',
-                  title: 'Pay on cable',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/Payment_high_device4.gif',
-                  title: 'Payment High Device',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/Payment_flat_device.gif',
-                  title: 'Payment Flat Device',
+                  image: 'assets/assets/images/Rear_flap_with_cable_2.gif',
+                  title: 'Rear flap With Cable',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_assembly_dumbbells.gif',
-                  title: 'Flat Assembly Dumbbells',
+                  image: 'assets/assets/images/Side_flap_with_dumbbell.gif',
+                  title: 'Side flap With Dumbbell',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/High_bar_smss.gif',
-                  title: 'High Bar SMS',
+                  image: 'assets/assets/images/Front_flap_with_dumbbells.gif',
+                  title: 'Front flap With Dumbbells',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_barr.gif',
-                  title: 'Flat Bar',
+                  image: 'assets/assets/images/Rear_flap_4.gif',
+                  title: 'Rear Flap',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Parallel.gif',
-                  title: 'Parallel',
+                  image: 'assets/assets/images/Front_flap_with_bar_2.gif',
+                  title: 'Front flap With Bar',
                 ),
               ]),
               SizedBox(height: 10),

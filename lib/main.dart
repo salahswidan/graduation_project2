@@ -39,9 +39,16 @@ import 'exercise_beginner_push_pull_leg/pull_1.dart';
 import 'exercise_beginner_push_pull_leg/push2.dart';
 import 'exercise_beginner_push_pull_leg/push_1.dart';
 import 'exercises/beginner/increase_weight/Day1_Chest.dart';
+import 'guide/armor_guide.dart';
+import 'guide/back_guide.dart';
+import 'guide/cardio_guide.dart';
 import 'guide/chest_guide.dart';
+import 'guide/legs_guide.dart';
+import 'guide/shoulders_guide.dart';
 import 'healthy_recipes/bulking_levels.dart';
 import 'levels/Beginner/beginner_screen.dart';
+import 'payment/payment_card.dart';
+import 'payment/payment_resend_code.dart';
 import 'private/food_bulking/bulking_and_drying_level_1.dart';
 import 'profile/profile_page.dart';
 import 'profile/setting_screen.dart';
@@ -59,7 +66,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChestGuide(),
+      home: Splash(),
     );
   }
 }

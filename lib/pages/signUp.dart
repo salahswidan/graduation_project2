@@ -9,17 +9,17 @@ class Signup extends StatelessWidget {
   const Signup({super.key});
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.black,
-        body: SizedBox(
-          height: double.infinity,
-          width: double.infinity,
-          //   color: Colors.amber[100],
-          child: Stack(
-            children: [
-              Image.asset('assets/assets/images/sign_in.jpg'),
-              Center(
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SizedBox(
+        height: double.infinity,
+        width: double.infinity,
+        //   color: Colors.amber[100],
+        child: Stack(
+          children: [
+            Image.asset('assets/assets/images/sign_in.jpg'),
+            Center(
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     SizedBox(
@@ -220,8 +220,8 @@ class Signup extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

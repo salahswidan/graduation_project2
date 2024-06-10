@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../constant/constant.dart';
 import '../core/home.dart';
 
-class ChestGuide extends StatelessWidget {
-  const ChestGuide({Key? key}) : super(key: key);
+class BackGuide extends StatelessWidget {
+  const BackGuide({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ChestGuide extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Chest',
+            'Back',
             style: TextStyle(color: Colors.black, fontSize: 28),
           ),
         ),
@@ -52,72 +52,52 @@ class ChestGuide extends StatelessWidget {
             children: [
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/High_Dumbbell.gif',
-                  title: 'High assembly dumbbells',
+                  image: 'assets/assets/images/Single_bar_pull_up.gif',
+                  title: 'Single Bar Pull-Up',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Butterfly2.gif',
-                  title: 'Butterfly collection',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/pressure.gif',
-                  title: 'Pressure',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/Assemble_rope.gif',
-                  title: 'Assemble Rope',
+                  image: 'assets/assets/images/High_pull_rope.gif',
+                  title: 'High Pull Rope',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_Dumbbells2.gif',
-                  title: 'Flat Dumbbells',
+                  image: 'assets/assets/images/Pull_up_bar_tight.gif',
+                  title: 'Pull Up Bar Tight',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Payment_high_device.gif',
-                  title: 'Payment High Device',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/Payment_high_device3.gif',
-                  title: 'Payment High Device',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/Pay_on_cable.gif',
-                  title: 'Pay on cable',
+                  image: 'assets/assets/images/Bar_sms_2.gif',
+                  title: 'Bar SMS',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Payment_high_device4.gif',
-                  title: 'Payment High Device',
+                  image: 'assets/assets/images/High_pull_on_the_cable.gif',
+                  title: 'High Pull on the cable',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Payment_flat_device.gif',
-                  title: 'Payment Flat Device',
-                ),
-              ]),
-              _buildItemList(context, [
-                ItemData(
-                  image: 'assets/assets/images/Flat_assembly_dumbbells.gif',
-                  title: 'Flat Assembly Dumbbells',
-                ),
-                ItemData(
-                  image: 'assets/assets/images/High_bar_smss.gif',
-                  title: 'High Bar SMS',
+                  image: 'assets/assets/images/Trump.gif',
+                  title: 'Trump',
                 ),
               ]),
               _buildItemList(context, [
                 ItemData(
-                  image: 'assets/assets/images/Flat_barr.gif',
-                  title: 'Flat Bar',
+                  image: 'assets/assets/images/Single_pull.gif',
+                  title: 'Single Pull',
                 ),
                 ItemData(
-                  image: 'assets/assets/images/Parallel.gif',
-                  title: 'Parallel',
+                  image: 'assets/assets/images/Double_dumbbell_pull.gif',
+                  title: 'Double Dumbbell Pull',
+                ),
+              ]),
+              _buildItemList(context, [
+                ItemData(
+                  image: 'assets/assets/images/His_mind_2.gif',
+                  title: 'His Mind',
+                ),
+                ItemData(
+                  image: 'assets/assets/images/Tight_ground_pull.gif',
+                  title: 'Tight Ground Pull',
                 ),
               ]),
               SizedBox(height: 10),
