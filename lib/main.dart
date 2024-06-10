@@ -47,6 +47,7 @@ import 'guide/legs_guide.dart';
 import 'guide/shoulders_guide.dart';
 import 'healthy_recipes/bulking_levels.dart';
 import 'levels/Beginner/beginner_screen.dart';
+import 'loss_weight/loss_wight_level_one.dart';
 import 'payment/payment_card.dart';
 import 'payment/payment_resend_code.dart';
 import 'private/food_bulking/bulking_and_drying_level_1.dart';
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Verification(),
+      home: LossWightUp1(),
     );
   }
 }

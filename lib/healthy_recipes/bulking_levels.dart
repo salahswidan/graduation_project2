@@ -48,7 +48,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -62,7 +62,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             ' Whey\n protein         1 Scoop       120           24         3         1',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -77,7 +77,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Qats                125 g       433.75       15     73.75     8.63',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -92,7 +92,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Walnuts           30 g       196           4.56    4.08     19.56',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -103,7 +103,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                     ),
                     Text(
                       'Preparation method:Mix oats with walnuts and \n     protein, then add water and stir the mixture',
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     Divider(
                       thickness: 1,
@@ -133,7 +133,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -147,7 +147,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             ' Banana         100              89             1.1        23      0.3',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -162,7 +162,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Walnuts           30 g       196           4.56    4.08     19.56',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -177,7 +177,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Boiled egg      2 eggs    140           12         2           10',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -192,7 +192,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Multivamin\nSupplement   1 tablet       -               -            -              -',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -224,7 +224,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -238,7 +238,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             ' Chicken\n breast             200g         242           48           0       3.6',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -252,8 +252,8 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Basmati\nRice                  120 g       417.6       8.64     92.4     0.96',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            'Basmati\nRice                  120 g       416.6       8.64     92.4     0.96',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -268,7 +268,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Boiled egg       3 eggs       210           18        3          15',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -282,7 +282,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                     ),
                     Text(
                       'Medium salad example: tomatoes with cucumbers \n                           with a little olive oil ',
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
 
                     //!  lable 4
@@ -308,7 +308,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -322,7 +322,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             ' Coffee             1                  2             0             0       0',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -337,7 +337,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Banana           199 g           89          1.1          23     0.3',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -373,7 +373,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       children: [
                         Text(
                           '                        Quantity   Calories   Protein   Carb   Fat',
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -387,7 +387,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             ' Coffee             200g         242           48           0       3.6',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -401,8 +401,8 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Banana            120 g       417.6       8.64     92.4     0.96',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            'Banana            120 g       416.6       8.64     92.4     0.96',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -417,7 +417,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                     ),
                     Text(
                       'Medium salad example: tomatoes with cucumbers \n                           with a little olive oil ',
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                     Divider(
                       thickness: 1,
@@ -430,7 +430,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       children: [
                         Text(
                           '                         Quantity        Protein       Carb          Fat',
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ],
                     ),
@@ -447,7 +447,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             'Total                  2796           189.4       318.9       83.9    ',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -460,8 +460,8 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       color: Colors.white,
                     ),
 
-                  Rate_Us(),
-            bottom_tab_bar(),
+                    Rate_Us(),
+                    bottom_tab_bar(),
                   ],
                 ),
               ),
@@ -494,7 +494,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -509,7 +509,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               ' Whole Grain \n      Bread         50 g         134.5         4.5        25      1.5',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -525,7 +525,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Boiled egg \n     While             3               51          10.8        0.6       0',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -541,7 +541,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Boiled egg     2 eggs        140           12          2         10',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -557,7 +557,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Coffee Without\n        Sugar          1                2               0           0          0',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -587,7 +587,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -602,7 +602,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               ' Almond         40 g           230         8.48       8.66  19.76',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -618,7 +618,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Medium-sized \n       apple      150 g          150          0            19.5        0',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -634,7 +634,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Multivamin\nSupplement   1 tablet       -               -            -              -',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -666,7 +666,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -681,7 +681,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               ' Chicken\n breast             200g         242           48           0       3.6',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -697,7 +697,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Basmati\nRice                  100 g       348           7.2       77         0.8',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -713,7 +713,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Sweet\nPotato              150 g       129           2.4        30      0.15',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -753,7 +753,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -768,7 +768,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               ' Whey\n protein        1 scoop         120           24           3       1',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -784,7 +784,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Oats               80 g             277.6       9.6     47.2     5.52',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -798,9 +798,9 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Almond         30 g             172.5       6.36   6.50   14.82',
+                              'Almond         30 g             162.5       6.36   6.50   14.82',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -816,7 +816,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Banana         100 g             89            1.1       23      0.3',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -830,7 +830,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       ),
                       Text(
                         'Preparation method:Mix oats with almonds and \n   protein, then add water and put everything in\n                         the electric blender',
-                        style: TextStyle(color: Colors.white, fontSize: 17),
+                        style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
 
                       //!  lable 5
@@ -856,7 +856,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             '                        Quantity   Calories   Protein   Carb   Fat',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -871,7 +871,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               ' Chicken\n breast             200g         242           48           0       3.6',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -887,7 +887,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Basmati\nrice                  100 g       348           7.2       77         0.8',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -902,7 +902,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                       ),
                       Text(
                         'Medium salad example: tomatoes with \n      cucumbers with a little olive oil ',
-                        style: TextStyle(color: Colors.white, fontSize: 17),
+                        style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                       Divider(
                         thickness: 1,
@@ -915,7 +915,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         children: [
                           Text(
                             '                         Quantity        Protein       Carb          Fat',
-                            style: TextStyle(color: Colors.white, fontSize: 17),
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ],
                       ),
@@ -933,7 +933,7 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                             Text(
                               'Total               2796.6           194.3       323.7       71.8    ',
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 17),
+                                  TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
@@ -946,8 +946,8 @@ class HealthyRecipesBulkingUp1 extends StatelessWidget {
                         color: Colors.white,
                       ),
 
-                    Rate_Us(),
-            bottom_tab_bar(),
+                      Rate_Us(),
+                      bottom_tab_bar(),
                     ],
                   ),
                 ),

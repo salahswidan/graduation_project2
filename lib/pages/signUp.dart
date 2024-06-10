@@ -81,9 +81,33 @@ class Signup extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       child: TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                             icon: Icon(
                               Icons.person,
+                              color: Color(
+                                  0xffD0FD3E), //Color.fromARGB(255, 83, 76, 76)
+                            ),
+                            hintText: "Name ",
+                            hintStyle: TextStyle(color: Colors.white),
+                            border: InputBorder.none),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(66),
+                      ),
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      child: TextField(
+                        style: TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                            icon: Icon(
+                              Icons.email,
                               color: Color(
                                   0xffD0FD3E), //Color.fromARGB(255, 83, 76, 76)
                             ),
@@ -103,6 +127,7 @@ class Signup extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       child: TextField(
+                        style: TextStyle(color: Colors.white),
                         obscureText: true,
                         decoration: InputDecoration(
                             suffix: Icon(
@@ -130,6 +155,7 @@ class Signup extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       child: TextField(
+                        style: TextStyle(color: Colors.white),
                         obscureText: true,
                         decoration: InputDecoration(
                             suffix: Icon(
@@ -141,7 +167,7 @@ class Signup extends StatelessWidget {
                               color: Color(0xffD0FD3E),
                               size: 19,
                             ),
-                            hintText: " Password ",
+                            hintText: " Confirm Password ",
                             hintStyle: TextStyle(color: Colors.white),
                             border: InputBorder.none),
                       ),

@@ -22,9 +22,8 @@ class _Page1State extends State<OnBoardingScreen3> {
           children: [
             PageView.builder(
               controller: controller,
-              itemCount: 3, // Replace with the number of pages you have
+              itemCount: 3,
               itemBuilder: (BuildContext context, int index) {
-                // Your page content here
                 return SizedBox(
                   height: double.infinity,
                   width: double.infinity,
@@ -38,75 +37,78 @@ class _Page1State extends State<OnBoardingScreen3> {
                         ),
                       ),
                       Center(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 530,
-                            ),
-                            SizedBox(height: 30),
-                            Text(
-                              '            ACTION IS THE  \n      KEY TO ALL SUCCESS ',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 28),
-                            ),
-                            SizedBox(
-                              height: 120,
-                            ),
-                            Align(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: SmoothPageIndicator(
-                                    controller: controller,
-                                    count:
-                                        3, // Replace with the number of pages you have
-                                    effect: ExpandingDotsEffect(
-                                      activeDotColor: Color(0xffD0FD3E),
-                                      dotColor: Colors.grey,
-                                      dotHeight: 7,
-                                      dotWidth: 10,
-                                    ) // You can change the effect here
-                                    ),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 530,
                               ),
-                            ),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: 230,
+                              SizedBox(height: 30),
+                              Text(
+                                '            ACTION IS THE  \n      KEY TO ALL SUCCESS ',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 28),
+                              ),
+                              SizedBox(
+                                height: 120,
+                              ),
+                              Align(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: SmoothPageIndicator(
+                                      controller: controller,
+                                      count:
+                                          3, // Replace with the number of pages you have
+                                      effect: ExpandingDotsEffect(
+                                        activeDotColor: Color(0xffD0FD3E),
+                                        dotColor: Colors.grey,
+                                        dotHeight: 7,
+                                        dotWidth: 10,
+                                      ) // You can change the effect here
+                                      ),
                                 ),
-                                ElevatedButton(
-                                  onPressed: () {},
-                                  style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        Color(0xffD0FD3E)),
-                                    padding: MaterialStateProperty.all(
-                                        EdgeInsets.symmetric(
-                                            horizontal: 20, vertical: 10)),
-                                    shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(27))),
+                              ),
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    width: 230,
                                   ),
-                                  child: GestureDetector(
-                                     onTap: () {
+                                  ElevatedButton(
+                                    onPressed: () {},
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all(
+                                              Color(0xffD0FD3E)),
+                                      padding: MaterialStateProperty.all(
+                                          EdgeInsets.symmetric(
+                                              horizontal: 20, vertical: 10)),
+                                      shape: MaterialStateProperty.all(
+                                          RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(27))),
+                                    ),
+                                    child: GestureDetector(
+                                      onTap: () {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Login()),
                                         );
                                       },
-                                    child: Text(
-                                      " Start Now > ",
-                                      style: TextStyle(
-                                          fontSize: 24, color: Colors.black),
+                                      child: Text(
+                                        " Start Now > ",
+                                        style: TextStyle(
+                                            fontSize: 24, color: Colors.black),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            )
-                          ],
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],

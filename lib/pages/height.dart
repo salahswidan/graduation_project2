@@ -16,8 +16,7 @@ class _HeightPickerState extends State<HeightPicker> {
       body: Stack(
         children: [
           Image.asset(
-//'assets/assets/images/Height.png',
-'assets/assets/images/test1.gif',
+            'assets/assets/images/Height.png',
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,

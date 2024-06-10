@@ -51,7 +51,7 @@ class _AgePickerState extends State<Age> {
                       children: [
                         Text(
                           age.toString(),
-                          style: TextStyle(fontSize: 40, color: Colors.white),
+                          style: TextStyle(fontSize: 35, color: Colors.white),
                         ),
                         Center(
                           child: Container(

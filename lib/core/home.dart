@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:ui_screens/Drying/drying_levels.dart';
+import 'package:ui_screens/Top_sources/Top_Sources.dart';
 import 'package:ui_screens/core/Nutrition_Program_see_all.dart';
 import 'package:ui_screens/core/nutrition_guide_see_all.dart';
 import 'package:ui_screens/core/training_programs_see_all.dart';
 
 import '../constant/constant.dart';
 import '../exercises/beginner/increase_weight/Day1_Chest.dart';
+import '../healthy_recipes/bulking_levels.dart';
+import '../supplement/supplement_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -129,11 +133,26 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              Image.asset('assets/assets/images/Dietart.jpg'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DryingLevels()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/Dietart.jpg')),
               SizedBox(
                 height: 20,
               ),
-              Image.asset('assets/assets/images/Nutritional.jpg'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HealthyRecipesBulkingUp1()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/Nutritional.jpg')),
               SizedBox(
                 height: 20,
               ),
@@ -168,42 +187,58 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Image.asset(
-                    'assets/assets/images/protein.png',
-                    height: 189,
-                    width: 182,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    'assets/assets/images/carbs.png',
-                    height: 189,
-                    width: 182,
-                  ),
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TopSources()),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/assets/images/protein.png',
+                      height: 189,
+                      width: 182,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Image.asset(
+                      'assets/assets/images/carbs.png',
+                      height: 189,
+                      width: 182,
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Image.asset(
-                    'assets/assets/images/Dariy.png',
-                    height: 189,
-                    width: 182,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    'assets/assets/images/fat.png',
-                    height: 189,
-                    width: 182,
-                  ),
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TopSources()),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/assets/images/Dariy.png',
+                      height: 189,
+                      width: 182,
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Image.asset(
+                      'assets/assets/images/fat.png',
+                      height: 189,
+                      width: 182,
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 30,
@@ -223,8 +258,24 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              Image.asset('assets/assets/images/supplements.jpg'),
-              Image.asset('assets/assets/images/supplements.jpg'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SupplementScreen()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/supplements.jpg')),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SupplementScreen()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/supplements.jpg')),
             ],
           ),
         ),

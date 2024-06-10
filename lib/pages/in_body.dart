@@ -19,7 +19,7 @@ class _MyWidgetState extends State<InBody> {
           title: Row(
             children: [
               Text(
-                'Enter Your Information..........',
+                'Enter Your Information.......',
                 style: TextStyle(color: Color(0xffD0FD3E)),
               ),
               SizedBox(

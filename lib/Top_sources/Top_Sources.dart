@@ -40,7 +40,7 @@ class TopSources extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          '                                   Calories             Protein            Carb            Fat',
+                          '                              Calories           Protein            Carb            Fat',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
@@ -168,7 +168,7 @@ class TopSources extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            '                                   Calories             Protein            Carb            Fat',
+                            '                            Calories       Protein            Carb            Fat',
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
@@ -296,7 +296,7 @@ class TopSources extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          '                                   Calories             Protein            Carb            Fat',
+                          '                             Calories         Protein         Carb          Fat',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
@@ -391,7 +391,7 @@ class TopSources extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            '                                   Calories             Protein            Carb            Fat',
+                            '                             Calories           Protein            Carb            Fat',
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
@@ -550,7 +550,7 @@ class TopSources extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          '                                   Calories             Protein            Carb            Fat',
+                          '                                 Calories            Protein         Carb         Fat',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
@@ -715,12 +715,12 @@ class CustomPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(5.0),
       child: Row(
         children: [
           Text(
             '$name            $caloriesNum                 $proteinNum                 $carbNum              $fatNum',
-            style: TextStyle(color: Colors.white, fontSize: 13),
+            style: TextStyle(color: Colors.white, fontSize: 12),
           )
         ],
       ),

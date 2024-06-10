@@ -77,6 +77,7 @@ class Login extends StatelessWidget {
                         width: double.infinity,
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         child: TextField(
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                               icon: Icon(
                                 Icons.person,
@@ -99,19 +100,21 @@ class Login extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         child: TextField(
                           obscureText: true,
+                          style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                              suffix: Icon(
-                                Icons.visibility,
-                                color: Colors.purple[900],
-                              ),
-                              icon: Icon(
-                                Icons.lock,
-                                color: Color(0xffD0FD3E),
-                                size: 19,
-                              ),
-                              hintText: " Password :",
-                              hintStyle: TextStyle(color: Colors.white),
-                              border: InputBorder.none),
+                            suffix: Icon(
+                              Icons.visibility,
+                              color: Colors.purple[900],
+                            ),
+                            icon: Icon(
+                              Icons.lock,
+                              color: Color(0xffD0FD3E),
+                              size: 19,
+                            ),
+                            hintText: " Password :",
+                            hintStyle: TextStyle(color: Colors.white),
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
                       SizedBox(

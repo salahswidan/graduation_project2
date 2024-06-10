@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_screens/core/home.dart';
 
 import '../constant/constant.dart';
 
@@ -13,10 +14,18 @@ class SupplementScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.black,
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_circle_left_outlined,
-          color: Color(0xffD0FD3E),
-          size: 50,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
+          },
+          child: Icon(
+            Icons.arrow_circle_left_outlined,
+            color: Color(0xffD0FD3E),
+            size: 50,
+          ),
         ),
       ),
       body: SingleChildScrollView(

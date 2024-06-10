@@ -35,96 +35,99 @@ class _Page1State extends State<OnBoardingScreen1> {
                         height: 600,
                       ),
                       Center(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 500,
-                            ),
-                            SizedBox(height: 30),
-                            Text(
-                              '  MEET YOUR COACH,\nSTART YOUR JOURNEY ',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 28),
-                            ),
-                            SizedBox(
-                              height: 120,
-                            ),
-                            Align(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: SmoothPageIndicator(
-                                    controller: controller,
-                                    count:
-                                        3, // Replace with the number of pages you have
-                                    effect: ExpandingDotsEffect(
-                                      activeDotColor: Color(0xffD0FD3E),
-                                      dotColor: Colors.grey,
-                                      dotHeight: 7,
-                                      dotWidth: 10,
-                                    ) // You can change the effect here
-                                    ),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 500,
                               ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(vertical: 27),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  ElevatedButton(
-                                    onPressed: () {},
-                                    style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                              Color(0xffD0FD3E)),
-                                      padding: MaterialStateProperty.all(
-                                          EdgeInsets.symmetric(
-                                              horizontal: 60, vertical: 10)),
-                                      shape: MaterialStateProperty.all(
-                                          RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(27))),
+                              SizedBox(height: 30),
+                              Text(
+                                '  MEET YOUR COACH,\nSTART YOUR JOURNEY ',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 28),
+                              ),
+                              SizedBox(
+                                height: 120,
+                              ),
+                              Align(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: SmoothPageIndicator(
+                                      controller: controller,
+                                      count:
+                                          3, // Replace with the number of pages you have
+                                      effect: ExpandingDotsEffect(
+                                        activeDotColor: Color(0xffD0FD3E),
+                                        dotColor: Colors.grey,
+                                        dotHeight: 7,
+                                        dotWidth: 10,
+                                      ) // You can change the effect here
+                                      ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Container(
+                                margin: EdgeInsets.symmetric(vertical: 27),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    ElevatedButton(
+                                      onPressed: () {},
+                                      style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all(
+                                                Color(0xffD0FD3E)),
+                                        padding: MaterialStateProperty.all(
+                                            EdgeInsets.symmetric(
+                                                horizontal: 60, vertical: 10)),
+                                        shape: MaterialStateProperty.all(
+                                            RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(27))),
+                                      ),
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Login()),
+                                          );
+                                        },
+                                        child: Text(
+                                          " Skip ",
+                                          style: TextStyle(
+                                              fontSize: 24,
+                                              color: Colors.black),
+                                        ),
+                                      ),
                                     ),
-                                    child: GestureDetector(
+                                    SizedBox(
+                                      width: 160,
+                                    ),
+                                    //! NEXT
+                                    GestureDetector(
                                       onTap: () {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Login()),
+                                              builder: (context) =>
+                                                  OnBoardingScreen2()),
                                         );
                                       },
-                                      child: Text(
-                                        " Skip ",
-                                        style: TextStyle(
-                                            fontSize: 24, color: Colors.black),
+                                      child: Icon(
+                                        Icons.arrow_circle_right_outlined,
+                                        color: Color(0xffD0FD3E),
+                                        size: 60,
                                       ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 160,
-                                  ),
-                                  //! NEXT
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                OnBoardingScreen2()),
-                                      );
-                                    },
-                                    child: Icon(
-                                      Icons.arrow_circle_right_outlined,
-                                      color: Color(0xffD0FD3E),
-                                      size: 60,
-                                    ),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
