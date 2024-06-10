@@ -58,6 +58,7 @@ class _PinputExampleState extends State<Verification> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Pinput(
+                length: 6,
                 controller: _textEditingController,
                 onChanged: (value) {
                   setState(() {
