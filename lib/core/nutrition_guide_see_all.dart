@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_screens/Top_sources/Top_Sources.dart';
 import 'package:ui_screens/core/home.dart';
 import 'package:ui_screens/exercises/beginner/increase_weight/Day1_Chest.dart';
 
@@ -47,20 +48,42 @@ class Nutritionguide extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Image.asset(
-                'assets/assets/images/Nutritionguide_see_all.jpg',
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: 750,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TopSources()),
+                  );
+                },
+                child: Image.asset(
+                  'assets/assets/images/Nutritionguide_see_all.jpg',
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: 750,
+                ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Image.asset('assets/assets/images/egg_products.png'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TopSources()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/egg_products.png')),
               SizedBox(
                 height: 10,
               ),
-              Image.asset('assets/assets/images/fat_oil.png'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TopSources()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/fat_oil.png')),
               Rate_Us(),
               bottom_tab_bar(),
             ],

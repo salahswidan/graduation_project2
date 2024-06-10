@@ -106,7 +106,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              ' Almond         40 g           230         8.48       8.66  19.76',
+                              'Boiled egg \n     While             3               51          10.8        0.6       0',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -122,7 +122,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Medium-sized \n       apple      150 g          150          0            19.5        0',
+                              'Qats                 100 g          347          12         60        7',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -138,7 +138,40 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Multivamin\nSupplement   1 tablet       -               -            -              -',
+                              'Boiled egg       2 eggs        140           12          2         10',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.white,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              ' Almond            40 g           230         8.48      8.66  19.76',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Divider(
+                        thickness: 1,
+                        color: Colors.white,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Multivamin\nSupplement   1 Tablet       -               -            -              -',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -201,7 +234,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Basmati\nRice                  100 g       348           7.2       77         0.8',
+                              'Sweet\nPotato              150 g       129           2.4        30      0.15',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -217,7 +250,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Sweet\nPotato              150 g       129           2.4        30      0.15',
+                              'Boiled egg     3 eggs        210           18          3         15',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -272,68 +305,19 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              ' Whey\n protein        1 scoop         120           24           3       1',
+                              'Coffee              1                2               0           0          0',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
                           ],
                         ),
                       ),
+
                       Divider(
                         thickness: 1,
                         color: Colors.white,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Oats               80 g             277.6       9.6     47.2     5.52',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: Colors.white,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Almond         30 g             162.5       6.36   6.50   14.82',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: Colors.white,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Banana         100 g             89            1.1       23      0.3',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
+
                       Text(
                         'Preparation method:Mix oats with almonds and \n   protein, then add water and put everything in\n                         the electric blender',
                         style: TextStyle(color: Colors.white, fontSize: 16),
@@ -375,7 +359,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              ' Chicken\n breast             200g         242           48           0       3.6',
+                              'Canned Tuna     200g        400           48           0     22',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -391,7 +375,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Basmati\nrice                  100 g       348           7.2       77         0.8',
+                              'Basmati\nrice                      50 g       174           3.6       38.5    0.4',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -437,7 +421,7 @@ class LossWightUp1 extends StatelessWidget {
                         child: Row(
                           children: [
                             Text(
-                              'Total               2796.6           194.3       323.7       71.8    ',
+                              'Total               1934.4           176.2       136.3       80.2    ',
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),

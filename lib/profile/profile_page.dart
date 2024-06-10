@@ -1,8 +1,65 @@
 import 'package:flutter/material.dart';
+import 'package:ui_screens/profile/setting_screen.dart';
 import '../constant/constant.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
+
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  DateTime? _selectedDate;
+
+  String _selectedCity = 'Ismailia';
+
+  final List<String> _cities = [
+    'Cairo',
+    'Alexandria',
+    'Giza',
+    'Shubra El Kheima',
+    'Port Said',
+    'Suez',
+    'Mansoura',
+    'Tanta',
+    'Asyut',
+    'Fayoum',
+    'Zagazig',
+    'Ismailia',
+    'Kafr El Sheikh',
+    'Minya',
+    'Damietta',
+    'Luxor',
+    'Qena',
+    'Sohag',
+    'Hurghada',
+    'Aswan',
+    'Qalyubia',
+    'Gharbia',
+    'Monufia',
+    'Sharqia',
+    'Beheira',
+    'Beni Suef',
+    'New Valley',
+    'Matruh',
+    'Red Sea',
+    'North Sinai',
+    'South Sinai'
+  ];
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: _selectedDate ?? DateTime.now(),
+      firstDate: DateTime(1900),
+      lastDate: DateTime.now(),
+    );
+    if (picked != null && picked != _selectedDate)
+      setState(() {
+        _selectedDate = picked;
+      });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +69,21 @@ class ProfilePage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.black,
         centerTitle: true,
-        leading: Icon(Icons.arrow_back_ios),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SettingScreen()),
+            );
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+        ),
         title: Text(
           'Edit Profile',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 24, color: Colors.white),
         ),
       ),
       body: SingleChildScrollView(
@@ -44,11 +112,11 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            buildTextFieldRow('Name', 'Saied Ahmed'),
-            buildTextFieldRow('Email', 'barbarysaied2@gmail.com'),
-            buildTextFieldRow('Password', '*************'),
-            buildTextFieldRow('Date of Birth', '9/06/2002'),
-            buildTextFieldRow('Country/Region', 'Ismailia'),
+            buildTextFieldRow('Name', 'Saied Ahmed', false),
+            buildTextFieldRow('Email', 'barbarysaied2@gmail.com', false),
+            buildTextFieldRow('Password', '*************', true),
+            buildDateFieldRow('Date of Birth', '9/06/2002'),
+            buildDropdownRow('Country/Region', 'Ismailia'),
             SizedBox(height: 20),
             Center(
               child: ElevatedButton(
@@ -73,7 +141,7 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget buildTextFieldRow(String label, String hintText) {
+  Widget buildTextFieldRow(String label, String hintText, bool obscureText) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -93,11 +161,99 @@ class ProfilePage extends StatelessWidget {
           height: 50,
           padding: EdgeInsets.symmetric(horizontal: 26),
           child: TextField(
-            obscureText: true,
+            style: TextStyle(color: Colors.white),
+            obscureText: obscureText,
             decoration: InputDecoration(
               hintText: hintText,
               hintStyle: TextStyle(color: Colors.grey),
               border: InputBorder.none,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget buildDateFieldRow(String label, String hintText) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 10),
+        Text(
+          '   $label',
+          style: TextStyle(color: Colors.white, fontSize: 18),
+        ),
+        SizedBox(height: 5),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: Colors.white),
+          ),
+          width: double.infinity,
+          height: 50,
+          padding: EdgeInsets.symmetric(horizontal: 26),
+          child: InkWell(
+            onTap: () => _selectDate(context),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    _selectedDate == null
+                        ? hintText
+                        : "${_selectedDate!.day}/${_selectedDate!.month}/${_selectedDate!.year}",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ),
+                Icon(
+                  Icons.calendar_today,
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget buildDropdownRow(String label, String hintText) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 10),
+        Text(
+          '   $label',
+          style: TextStyle(color: Colors.white, fontSize: 18),
+        ),
+        SizedBox(height: 5),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: Colors.white),
+          ),
+          width: double.infinity,
+          height: 50,
+          padding: EdgeInsets.symmetric(horizontal: 26),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton<String>(
+              value: _selectedCity,
+              isExpanded: true,
+              icon: Icon(Icons.add_location_outlined, color: Colors.grey),
+              dropdownColor: Colors.black,
+              style: TextStyle(color: Colors.white),
+              onChanged: (String? newValue) {
+                setState(() {
+                  _selectedCity = newValue!;
+                });
+              },
+              items: _cities.map<DropdownMenuItem<String>>((String city) {
+                return DropdownMenuItem<String>(
+                  value: city,
+                  child: Text(city),
+                );
+              }).toList(),
             ),
           ),
         ),

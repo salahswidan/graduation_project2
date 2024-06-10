@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import '../constant/constant.dart';
 
 class SettingScreen extends StatelessWidget {
@@ -14,10 +13,13 @@ class SettingScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.black,
         centerTitle: true,
-        leading: Icon(Icons.arrow_back_ios),
+        leading: Icon(
+          Icons.arrow_back_ios,
+          color: Colors.white,
+        ),
         title: Text(
           'Settings',
-          style: TextStyle(fontSize: 24),
+          style: TextStyle(fontSize: 24, color: Colors.white),
         ),
       ),
       body: Padding(
@@ -38,27 +40,6 @@ class SettingScreen extends StatelessWidget {
                 color: Color(0xffD0FD3E),
               ),
               text: 'Edit Profil',
-            ),
-            ProfileItem(
-              icon: Icon(
-                Icons.privacy_tip_outlined,
-                color: Color(0xffD0FD3E),
-              ),
-              text: 'Security',
-            ),
-            ProfileItem(
-              icon: Icon(
-                Icons.notifications_none,
-                color: Color(0xffD0FD3E),
-              ),
-              text: 'Notification',
-            ),
-            ProfileItem(
-              icon: Icon(
-                Icons.lock_outlined,
-                color: Color(0xffD0FD3E),
-              ),
-              text: 'privacy',
             ),
             SizedBox(
               height: 10,
@@ -95,30 +76,6 @@ class SettingScreen extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Cache & cellular',
-              style: TextStyle(fontSize: 16, color: Colors.white),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            ProfileItem(
-              icon: Icon(
-                Icons.delete_outline,
-                color: Color(0xffD0FD3E),
-              ),
-              text: 'Free up space ',
-            ),
-            ProfileItem(
-              icon: Icon(
-                Icons.data_exploration_outlined,
-                color: Color(0xffD0FD3E),
-              ),
-              text: 'Date Sever',
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
               'Actions',
               style: TextStyle(fontSize: 16, color: Colors.white),
             ),
@@ -131,13 +88,6 @@ class SettingScreen extends StatelessWidget {
                 color: Color(0xffD0FD3E),
               ),
               text: 'Report a problem',
-            ),
-            ProfileItem(
-              icon: Icon(
-                Icons.people_alt_outlined,
-                color: Color(0xffD0FD3E),
-              ),
-              text: 'Add account',
             ),
             ProfileItem(
               icon: Icon(

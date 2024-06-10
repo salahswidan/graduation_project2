@@ -1,30 +1,70 @@
 import 'package:flutter/material.dart';
+import 'package:ui_screens/core/home.dart';
+import 'package:ui_screens/profile/profile_page.dart';
 
-class bottom_tab_bar extends StatelessWidget {
-  const bottom_tab_bar({
-    super.key,
-  });
+class bottom_tab_bar extends StatefulWidget {
+  const bottom_tab_bar({Key? key}) : super(key: key);
+
+  @override
+  _BottomTabBarState createState() => _BottomTabBarState();
+}
+
+class _BottomTabBarState extends State<bottom_tab_bar> {
+  int _selectedIndex = 0;
+
+  void _onIconTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+
+    switch (index) {
+      case 0:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
+        );
+        break;
+      case 3:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ProfilePage()),
+        );
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Icon(
-          Icons.home,
-          color: Color(0xffD0FD3E),
+        GestureDetector(
+          onTap: () => _onIconTapped(0),
+          child: Icon(
+            Icons.home,
+            color: _selectedIndex == 0 ? Color(0xffD0FD3E) : Colors.white,
+          ),
         ),
-        Icon(
-          Icons.add_alert_sharp,
-          color: Colors.white,
+        GestureDetector(
+          onTap: () => _onIconTapped(1),
+          child: Icon(
+            Icons.add_alert_sharp,
+            color: _selectedIndex == 1 ? Color(0xffD0FD3E) : Colors.white,
+          ),
         ),
-        Icon(
-          Icons.bar_chart,
-          color: Colors.white,
+        GestureDetector(
+          onTap: () => _onIconTapped(2),
+          child: Icon(
+            Icons.bar_chart,
+            color: _selectedIndex == 2 ? Color(0xffD0FD3E) : Colors.white,
+          ),
         ),
-        Icon(
-          Icons.panorama_fish_eye_outlined,
-          color: Colors.white,
+        GestureDetector(
+          onTap: () => _onIconTapped(3),
+          child: Icon(
+            Icons.person_3_outlined,
+            color: _selectedIndex == 3 ? Color(0xffD0FD3E) : Colors.white,
+          ),
         ),
       ],
     );

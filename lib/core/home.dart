@@ -8,6 +8,7 @@ import 'package:ui_screens/core/training_programs_see_all.dart';
 import '../constant/constant.dart';
 import '../exercises/beginner/increase_weight/Day1_Chest.dart';
 import '../healthy_recipes/bulking_levels.dart';
+import '../loss_weight/loss_wight_level_one.dart';
 import '../supplement/supplement_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -32,6 +33,113 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              Row(
+                children: [
+                  Text(
+                    'Common Questions',
+                    style: TextStyle(color: Color(0xffD0FD3E), fontSize: 24),
+                  ),
+                  SizedBox(
+                    width: 170,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TrainingPrograms()),
+                  );
+                },
+                child: Image.asset('assets/assets/images/questions.png'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Nutritional supplements',
+                    style: TextStyle(color: Color(0xffD0FD3E), fontSize: 14),
+                  ),
+                  SizedBox(
+                    width: 170,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SupplementScreen()),
+                      );
+                    },
+                    child: Text(
+                      'See All',
+                      style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SupplementScreen()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/supplements2.png')),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Exercise guide',
+                    style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
+                  ),
+                  SizedBox(
+                    width: 205,
+                  ),
+                  Text(
+                    'See All',
+                    style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Color(0xffD9D9D9),
+                    maxRadius: 45,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Color(0xffD9D9D9),
+                    maxRadius: 45,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Color(0xffD9D9D9),
+                    maxRadius: 45,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Color(0xffD9D9D9),
+                    maxRadius: 45,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Row(
                 children: [
                   Text(
@@ -63,48 +171,6 @@ class HomeScreen extends StatelessWidget {
                 'assets/assets/images/r1.jpg',
                 fit: BoxFit.fill,
                 width: 600,
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Exercise guide',
-                    style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
-                  ),
-                  SizedBox(
-                    width: 205,
-                  ),
-                  Text(
-                    'See All',
-                    style: TextStyle(color: Color(0xffD0FD3E), fontSize: 18),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Color(0xffD9D9D9),
-                    maxRadius: 45,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Color(0xffD9D9D9),
-                    maxRadius: 45,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Color(0xffD9D9D9),
-                    maxRadius: 45,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Color(0xffD9D9D9),
-                    maxRadius: 45,
-                  ),
-                ],
               ),
               SizedBox(
                 height: 30,
@@ -156,7 +222,14 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Image.asset('assets/assets/images/weight loss.jpg'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LossWightUp1()),
+                    );
+                  },
+                  child: Image.asset('assets/assets/images/weight loss.jpg')),
               SizedBox(
                 height: 30,
               ),
