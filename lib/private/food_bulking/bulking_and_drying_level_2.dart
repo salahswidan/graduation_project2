@@ -195,7 +195,7 @@ class FoodBulkingAndDryingUp2 extends StatelessWidget {
             children: [
               Text(
                 '                        Quantity   Calories   Protein   Carb   Fat',
-                style: TextStyle(color: Colors.white, fontSize: 17),
+                style: TextStyle(color: Colors.white, fontSize: 15),
               ),
             ],
           ),
@@ -254,7 +254,7 @@ class CustomDividerWithText extends StatelessWidget {
     Key? key,
     required this.text,
     this.dividerColor = Colors.white,
-    this.fontSize = 17,
+    this.fontSize = 15,
     this.padding = 8.0,
   }) : super(key: key);
 

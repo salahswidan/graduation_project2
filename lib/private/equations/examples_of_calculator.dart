@@ -1,9 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_screens/BMI/bmi_screen.dart';
+// import 'package:ui_screens/equations/bmi_screen.dart';
 import 'package:ui_screens/constant/constant.dart';
+// import 'package:ui_screens/equations/carb_calculator.dart';
+// import 'package:ui_screens/equations/protein_calculator.dart';
+// // import 'package:ui_screens/equations/stop_watch.dart';
 
-import '../core/home.dart';
+import '../../core/home.dart';
+import 'bmi_screen.dart';
+import 'carb_calculator.dart';
+import 'protein_calculator.dart';
+import 'stop_watch.dart';
+
+//import '../core/home.dart';
 
 class ExamplesOfCalculator extends StatelessWidget {
   const ExamplesOfCalculator({super.key});
@@ -47,21 +56,30 @@ class ExamplesOfCalculator extends StatelessWidget {
               width: 381,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Calorie Calculator (Carb)',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    Text(
-                      '>|',
-                      style: TextStyle(
-                          color: Color(0xffD0FD3E),
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CarbCalculatorScreen()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Calorie Calculator (Carb)',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      Text(
+                        '>|',
+                        style: TextStyle(
+                            color: Color(0xffD0FD3E),
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -115,21 +133,30 @@ class ExamplesOfCalculator extends StatelessWidget {
               width: 381,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Calorie Calculator (Protein)',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    Text(
-                      '>|',
-                      style: TextStyle(
-                          color: Color(0xffD0FD3E),
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProteinCalculatorScreen()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Calorie Calculator (Protein)',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      Text(
+                        '>|',
+                        style: TextStyle(
+                            color: Color(0xffD0FD3E),
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -145,21 +172,29 @@ class ExamplesOfCalculator extends StatelessWidget {
               width: 381,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Stop watch',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    Text(
-                      '>|',
-                      style: TextStyle(
-                          color: Color(0xffD0FD3E),
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => StopwatchApp()),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Stop watch',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      Text(
+                        '>|',
+                        style: TextStyle(
+                            color: Color(0xffD0FD3E),
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

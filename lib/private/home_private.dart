@@ -1,5 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+// import 'package:ui_screens/equations/carb_calculator.dart';
+// import 'package:ui_screens/equations/stop_watch.dart';
+import 'package:ui_screens/private/food_bulking/bulking_and_drying_level_2.dart';
 
 import '../Drying/drying_levels.dart';
 import '../Top_sources/Top_Sources.dart';
@@ -10,6 +13,9 @@ import '../core/training_programs_see_all.dart';
 import '../healthy_recipes/bulking_levels.dart';
 import '../loss_weight/loss_wight_level_one.dart';
 import '../supplement/supplement_screen.dart';
+import 'equations/carb_calculator.dart';
+import 'equations/stop_watch.dart';
+import 'food_bulking/bulking_and_drying_level_1.dart';
 
 class HomePrivate extends StatelessWidget {
   const HomePrivate({super.key});
@@ -62,7 +68,8 @@ class HomePrivate extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TrainingPrograms()),
+                    MaterialPageRoute(
+                        builder: (context) => CarbCalculatorScreen()),
                   );
                 },
                 child: Stack(
@@ -118,7 +125,7 @@ class HomePrivate extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SupplementScreen()),
+                    MaterialPageRoute(builder: (context) => StopwatchApp()),
                   );
                 },
                 child: Stack(
@@ -175,7 +182,7 @@ class HomePrivate extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => SupplementScreen()),
+                          builder: (context) => FoodBulkingAndDryingUp1()),
                     );
                   },
                   child: Image.asset('assets/assets/images/Private_NP.png')),
@@ -185,26 +192,53 @@ class HomePrivate extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Image.asset(
-                'assets/assets/images/dpfd1.png',
-                fit: BoxFit.fill,
-                width: 600,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FoodBulkingAndDryingUp1()),
+                  );
+                },
+                child: Image.asset(
+                  'assets/assets/images/dpfd1.png',
+                  fit: BoxFit.fill,
+                  width: 600,
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Image.asset(
-                'assets/assets/images/dpfdd2.png',
-                fit: BoxFit.fill,
-                width: 600,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FoodBulkingAndDryingUp2()),
+                  );
+                },
+                child: Image.asset(
+                  'assets/assets/images/dpfdd2.png',
+                  fit: BoxFit.fill,
+                  width: 600,
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Image.asset(
-                'assets/assets/images/dpfd2.png',
-                fit: BoxFit.fill,
-                width: 600,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => FoodBulkingAndDryingUp2()),
+                  );
+                },
+                child: Image.asset(
+                  'assets/assets/images/dpfd2.png',
+                  fit: BoxFit.fill,
+                  width: 600,
+                ),
               ),
               SizedBox(
                 height: 30,
