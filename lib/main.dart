@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:ui_screens/BMI/bmi_result_screen.dart';
 import 'package:ui_screens/BMI/bmi_screen.dart';
 import 'package:ui_screens/exercise_beginner_increaseWight_back/Day3_Cardio.dart';
 import 'package:ui_screens/exercise_beginner_increaseWight_back/Day4_Shoulders.dart';
@@ -23,6 +24,7 @@ import 'package:ui_screens/pages/verification.dart';
 import 'package:ui_screens/pages/weight.dart';
 import 'package:ui_screens/onBoardingScreens/Splash.dart';
 import 'package:ui_screens/private/food_bulking/bulking_and_drying_level_2.dart';
+import 'BMI/examples_of_calculator.dart';
 import 'Drying/drying_levels.dart';
 import 'TargetPage/custom_target_page.dart';
 import 'Top_sources/Top_Sources.dart';
@@ -50,7 +52,9 @@ import 'levels/Beginner/beginner_screen.dart';
 import 'loss_weight/loss_wight_level_one.dart';
 import 'payment/payment_card.dart';
 import 'payment/payment_resend_code.dart';
+import 'payment/plan.dart';
 import 'private/food_bulking/bulking_and_drying_level_1.dart';
+import 'private/home_private.dart';
 import 'profile/profile_page.dart';
 import 'profile/setting_screen.dart';
 import 'supplement/supplement_screen.dart';
@@ -67,7 +71,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
+      home: ExamplesOfCalculator(),
     );
   }
 }
