@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ui_screens/core/home.dart';
+import 'package:ui_screens/supplement/creatine_descrpation.dart';
+import 'package:ui_screens/supplement/multivitamin.dart';
+import 'package:ui_screens/supplement/opti_men.dart';
+import 'package:ui_screens/supplement/zink.dart';
 
 import '../constant/constant.dart';
+import 'protein_descrpation.dart';
 
 class SupplementScreen extends StatelessWidget {
   const SupplementScreen({Key? key}) : super(key: key);
@@ -44,13 +49,22 @@ class SupplementScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Text(
-                    'Protein',
-                    style: TextStyle(fontSize: 24, color: Color(0xffD0FD3E)),
-                  ),
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ProteinDescrpation()),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      'Protein',
+                      style: TextStyle(fontSize: 24, color: Color(0xffD0FD3E)),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10,
@@ -95,9 +109,18 @@ class SupplementScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text(
-                    'Creatien',
-                    style: TextStyle(fontSize: 24, color: Color(0xffD0FD3E)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CreatineDescrpation()),
+                      );
+                    },
+                    child: Text(
+                      'Creatien',
+                      style: TextStyle(fontSize: 24, color: Color(0xffD0FD3E)),
+                    ),
                   ),
                 ],
               ),
@@ -170,20 +193,46 @@ class SupplementScreen extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    _buildItemContainer(
-                      'assets/assets/images/zinc.png',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Zink()),
+                        );
+                      },
+                      child: _buildItemContainer(
+                        'assets/assets/images/zinc.png',
+                      ),
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    _buildItemContainer(
-                      'assets/assets/images/multivitamin.png',
+                       GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Multivitamin()),
+                  );
+                },
+                      child: _buildItemContainer(
+                        'assets/assets/images/multivitamin.png',
+                      ),
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    _buildItemContainer(
-                      'assets/assets/images/opti_men.png',
+                     GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => OptiMen()),
+                  );
+                },
+                      child: _buildItemContainer(
+                        'assets/assets/images/opti_men.png',
+                      ),
                     ),
                     SizedBox(
                       width: 10,

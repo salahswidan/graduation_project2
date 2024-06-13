@@ -22,6 +22,7 @@ import 'package:ui_screens/pages/verification.dart';
 import 'package:ui_screens/pages/weight.dart';
 import 'package:ui_screens/onBoardingScreens/Splash.dart';
 import 'package:ui_screens/private/food_bulking/bulking_and_drying_level_2.dart';
+import 'package:ui_screens/supplement/creatine_descrpation.dart';
 import 'Drying/drying_levels.dart';
 import 'TargetPage/custom_target_page.dart';
 import 'Top_sources/Top_Sources.dart';
@@ -55,7 +56,11 @@ import 'private/food_bulking/bulking_and_drying_level_1.dart';
 import 'private/home_private.dart';
 import 'profile/profile_page.dart';
 import 'profile/setting_screen.dart';
+import 'supplement/multivitamin.dart';
+import 'supplement/opti_men.dart';
+import 'supplement/protein_descrpation.dart';
 import 'supplement/supplement_screen.dart';
+import 'supplement/zink.dart';
 import 'woman/woman_levels.dart';
 
 void main() {
@@ -69,7 +74,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ExamplesOfCalculator(),
+      home: OptiMen(),
     );
   }
 }
