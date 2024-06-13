@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:ui_screens/onBoardingScreens/On_Boarding_Screen2.dart';
+import 'package:ui_screens/pages/core/login.dart';
 import 'package:ui_screens/pages/login.dart';
 
 class OnBoardingScreen1 extends StatefulWidget {
@@ -93,7 +94,7 @@ class _Page1State extends State<OnBoardingScreen1> {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) => Login()),
+                                                builder: (context) => const Login()),
                                           );
                                         },
                                         child: Text(

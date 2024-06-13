@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_screens/pages/age.dart';
+import 'package:ui_screens/pages/core/login.dart';
 import 'package:ui_screens/pages/login.dart';
 import 'package:ui_screens/pages/verification.dart';
 
@@ -106,7 +107,7 @@ class _GenderSelectionState extends State<GenderSelection> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Login()),
+                            MaterialPageRoute(builder: (context) => const Login()),
                           );
                         },
                         child: Icon(

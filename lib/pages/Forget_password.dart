@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
+import 'package:ui_screens/pages/core/login.dart';
 import 'package:ui_screens/pages/login.dart';
 
 class ForgetPassword extends StatefulWidget {
@@ -28,7 +29,7 @@ class _PinputExampleState extends State<ForgetPassword> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Login()),
+              MaterialPageRoute(builder: (context) => const Login()),
             );
           },
         ),

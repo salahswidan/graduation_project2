@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:ui_screens/pages/core/login.dart';
 
 import '../pages/login.dart';
 
@@ -95,7 +96,7 @@ class _Page1State extends State<OnBoardingScreen3> {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Login()),
+                                              builder: (context) => const Login()),
                                         );
                                       },
                                       child: Text(
