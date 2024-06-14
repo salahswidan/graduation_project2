@@ -64,88 +64,93 @@ class _PinputExampleState extends State<Verification> {
           }
         },
         builder: (context, state) {
-          return Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Row(
-                children: [
-                  Text(
-                    '    VERIFICATION',
-                    style: TextStyle(color: Colors.white, fontSize: 24),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              const Text(
-                'CHECK YOUR EMAIL WE\'VE SENT \n YOU THE PIN YOUR EMAIL.  ',
-                style: TextStyle(color: Colors.white, fontSize: 13),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Pinput(
-                    length: 6,
-                    controller: _textEditingController,
-                    onCompleted: (value) {
-                      setState(() {
-                        _inputText = value;
-                      });
-                    },
-                    cursor: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(bottom: 9),
-                          width: 22,
-                          height: 2,
-                          color: Color(0xffD0FD3E), // Bottom cursor color
-                        ),
-                      ],
+          return SingleChildScrollView(
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Row(
+                  children: [
+                    Text(
+                      '    VERIFICATION',
+                      style: TextStyle(color: Colors.white, fontSize: 24),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 220,
-              ),
-              GestureDetector(
-                onTap: () {
-                  context.read<UserCubit>().sendCode(email: widget.email);
-                },
-                child: const Text(
-                  'Did you receive any code?',
-                  style: TextStyle(color: Color(0xffD0FD3E)),
+                  ],
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              state is VerifyCodeLoading
-                  ? const CircularProgressIndicator()
-                  : ElevatedButton(
-                      onPressed: () {
-                        context.read<UserCubit>().verfiyCode(code: _inputText);
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  'CHECK YOUR EMAIL WE\'VE SENT \n YOU THE PIN YOUR EMAIL.  ',
+                  style: TextStyle(color: Colors.white, fontSize: 13),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Pinput(
+                      length: 6,
+                      controller: _textEditingController,
+                      onCompleted: (value) {
+                        setState(() {
+                          _inputText = value;
+                        });
                       },
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Color(0xffD0FD3E)),
-                        padding: MaterialStateProperty.all(
-                            const EdgeInsets.symmetric(
-                                horizontal: 90, vertical: 10)),
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(27))),
-                      ),
-                      child: const Text(
-                        "Verify",
-                        style: TextStyle(fontSize: 24, color: Colors.black),
+                      cursor: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 9),
+                            width: 22,
+                            height: 2,
+                            color: Color(0xffD0FD3E), // Bottom cursor color
+                          ),
+                        ],
                       ),
                     ),
-            ],
+                  ],
+                ),
+                const SizedBox(
+                  height: 220,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    context.read<UserCubit>().sendCode(email: widget.email);
+                  },
+                  child: const Text(
+                    'Did you receive any code?',
+                    style: TextStyle(color: Color(0xffD0FD3E)),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                state is VerifyCodeLoading
+                    ? const CircularProgressIndicator()
+                    : ElevatedButton(
+                        onPressed: () {
+                          context
+                              .read<UserCubit>()
+                              .verfiyCode(code: _inputText);
+                        },
+                        style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Color(0xffD0FD3E)),
+                          padding: MaterialStateProperty.all(
+                              const EdgeInsets.symmetric(
+                                  horizontal: 90, vertical: 10)),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(27))),
+                        ),
+                        child: const Text(
+                          "Verify",
+                          style: TextStyle(fontSize: 24, color: Colors.black),
+                        ),
+                      ),
+              ],
+            ),
           );
         },
       ),

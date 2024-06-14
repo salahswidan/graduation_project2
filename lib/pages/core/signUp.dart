@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -9,8 +8,8 @@ import 'package:ui_screens/pages/core/login.dart';
 import 'package:ui_screens/pages/core/verification.dart';
 
 class Signup extends StatelessWidget {
-   Signup({super.key});
-    String email = '';
+  Signup({super.key});
+  late String email = '';
   @override
   Widget build(BuildContext context) {
     GlobalKey<FormState> _signUpFormKey = GlobalKey();
@@ -31,23 +30,26 @@ class Signup extends StatelessWidget {
               child: BlocConsumer<UserCubit, UserState>(
                 listener: (context, state) {
                   if (state is SignUpSuccess) {
-                    // ScaffoldMessenger.of(context).showSnackBar(
-                    //   const SnackBar(
-                    //     content: Text(
-                    //       'Sign Up Success',
-                    //     ),
-                    //   ),
-                    // );
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Verification(email: email,)),
-                    );
+                    context
+                        .read<UserCubit>()
+                        .sendCode(email: _signUpEmail.text);
+                    if (state is SendCodeSuccess) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Verification(email: email)),
+                      );
+                    }
                   } else if (state is SignUpFailure) {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text(state.errMessage),
                     ));
                   }
+                  // else if (state is SendCodeLoading) {
+                  //   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  //     content: Text('Loading...'),
+                  //   ));
+                  // }
                 },
                 builder: (context, state) {
                   return SingleChildScrollView(
@@ -55,7 +57,7 @@ class Signup extends StatelessWidget {
                       key: _signUpFormKey,
                       child: Column(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Row(
@@ -66,7 +68,7 @@ class Signup extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Login()),
+                                        builder: (context) => const Login()),
                                   );
                                 },
                                 child: const Text(
@@ -290,7 +292,7 @@ class Signup extends StatelessWidget {
                                 const SizedBox(
                                   width: 100,
                                 ),
-                                state is SignUpLoading
+                                state is SignInLoading
                                     ? const CircularProgressIndicator()
                                     : ElevatedButton(
                                         onPressed: () {
@@ -303,8 +305,6 @@ class Signup extends StatelessWidget {
                                                 password: _signUpPassword.text,
                                                 confirmPassword:
                                                     _confirmPassword.text);
-                                            context.read<UserCubit>().sendCode(
-                                                email: _signUpEmail.text);
                                           }
                                         },
                                         style: ButtonStyle(
